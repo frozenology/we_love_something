@@ -92,7 +92,6 @@
             , canvas = document.getElementById('canvas')
             , context = canvas.getContext('2d')
             , render = function () {
-                window.location.hash = firstname.value;
                 var img = new Image();
                 img.onload = function () {
                     context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
@@ -109,19 +108,7 @@
                 var ua = navigator.userAgent || navigator.vendor || window.opera;
                 return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
             };
-        
-        if (isFacebookApp()) {
-            var dialog = document.getElementById('fb_app_browser');
-            if (!dialog.showModal) {
-                dialogPolyfill.registerDialog(dialog);
-            }
-            dialog.showModal();
-            
-        }
-        
-        if (window.location.hash) {
-            firstname.value = decodeURIComponent(window.location.hash.replace(/#|@(.)+/g, '') || 'เรา');
-        }
+                
         render();
         firstname.onkeyup = render;
         firstname.onchange = render;
