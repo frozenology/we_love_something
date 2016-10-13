@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="ณสามารถสร้างรูปโปรไฟล์เรารักในหลวงได้ง่ายๆ เพียงกรอกชื่อแล้วกดดาวน์โหลดได้ทันที">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="Earthchie <earthchie@gmail.com>">
+    <title>สร้างรูปเรารักในหลวง</title>
+    <meta property="fb:app_id" content="113581508678006" />
+    <meta property="fb:admins" content="581849270" />
+    <meta property="og:site_name" content="สร้างรูปเรารักในหลวง" />
+    <meta property="og:url" content="https://earthchie.com/loveking/" />
+    <meta property="og:title" content="เครื่องมือสร้างรูปเรารักในหลวง" />
+    <meta property="og:image" content="og.jpg" />
+    <meta property="og:description" content="คุณสามารถสร้างรูปโปรไฟล์เรารักในหลวงได้ง่ายๆ เพียงกรอกชื่อแล้วกดดาวน์โหลดได้ทันที" />
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row"> <span class="mdl-layout-title font-title" style="font-size:2.2em">
+                    <i class="material-icons">favorite</i> สร้างรูปมอบความรัก(จาก โปรเจ็คสร้างรูปเรารักในหลวง)
+                </span> </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <canvas id="canvas" width=600 height=600 style="float:right"></canvas>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h1 class="font-title">ทำแบนเนอร์ </h1>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="firstname" value="เรา">
+                            <label class="mdl-textfield__label" for="firstname">ชื่อแรก</label>
+                        </div>
+                        <br>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="lastname" value="เธอ">
+                            <label class="mdl-textfield__label" for="lastname">ชื่อหลัง</label>
+                        </div>
+                        <br>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="bottomname" value="เพราะเราเป็นคู่กัน">
+                            <label class="mdl-textfield__label" for="bottomname">ข้อความด้านล่าง</label>
+                        </div>
+                        <br>
+                        <div class="mdl-textfield mdl-js-textfield" style="width:300px;">
+                            <label for="offset">ขนาดตัวอักษร</label>
+                            <input id="fontsize" class="mdl-slider mdl-js-slider" type="range" min="30" max="150" value="70" tabindex="0"> </div>
+                        <div class="text-right" style="width:300px;"> <a href="#" id="download" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><i class="material-icons" style="top:0">file_download</i> ดาวน์โหลด</a> </div>
+                        <div style="width:300px;">
+                            <br>
+                            <br>
+                            <div class="fb-like" data-href="https://earthchie.com/loveking/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                        </div>
+                        <hr style="width:300px;">
+		ผู้ม๊อดเห็นว่าน่ารักดี เลยอยากจะเอาไว้ใช้ในโอกาศอื่นๆ ให้โปรแกรมยืดหยุ่นขึ้น // naut<br>
+		 - ขอขอบคุณต้นฉบับ <a href="https://earthchie.com/loveking/">https://earthchie.com/loveking/</a><br>
+                            - ขอขอบคุณ <a href="https://www.facebook.com/kulthida.rotchanawit/media_set?set=a.10153936040086444.1073741907.628211443&type=3" target="_blank">Kulthida Kul</a> ผู้ออกแบบและผู้ปลุกกระแส <br>
+                            - ขอบคุณฟอนต์น่ารักๆ <a href="http://www.f0nt.com/release/5011_the_little_uki_noworry/" target="_blank">5011_the_little_uki_noworry</a><br>
+                            - Source Code อยู่ที่ <a href="https://github.com/earthchie/we_love_the_king_generator/" target="_blank">Github</a> ภายใต้ลิขสิทธิ์ <a href="http://www.wtfpl.net/about/" target="_blank"> WTFPL 2.0</a>
+                            
+                        </small> </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <dialog id="fb_app_browser" class="mdl-dialog">
+        <h3 class="mdl-dialog__title">กรุณาเปิดเว็บนี้ในเบราเซอร์</h3>
+        <div class="mdl-dialog__content">
+            <p>คลิกที่เครื่องหมาย 3 จุดมุมขวาบน จากนั้นเลือก Open in Chrome (หรือ Open in Safari) </p>
+            <img src="fbapp.png" alt="">
+        </div>
+    </dialog>
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script>
+        var firstname = document.getElementById('firstname')
+			, lastname = document.getElementById('lastname')
+			, bottomname = document.getElementById('bottomname')
+            , fontsize = document.getElementById('fontsize')
+            , download = document.getElementById('download')
+            , canvas = document.getElementById('canvas')
+            , context = canvas.getContext('2d')
+            , render = function () {
+                window.location.hash = firstname.value;
+                var img = new Image();
+                img.onload = function () {
+                    context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
+                    context.fillStyle = '#fff';
+                    context.font = 'normal ' + (+fontsize.value) + 'px noworry';
+                    context.fillText(firstname.value, 200 - context.measureText(firstname.value).width, 310);
+                    //context.font = 'normal 70px noworry';
+                    context.fillText(lastname.value, 400, 310);
+                    context.fillText(bottomname.value, (canvas.width / 2) - (context.measureText(bottomname.value).width / 2), canvas.height - 20 - fontsize.value);
+                };
+                img.src = 'bg.png';
+            }
+            , isFacebookApp = function () {
+                var ua = navigator.userAgent || navigator.vendor || window.opera;
+                return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+            };
+        
+        if (isFacebookApp()) {
+            var dialog = document.getElementById('fb_app_browser');
+            if (!dialog.showModal) {
+                dialogPolyfill.registerDialog(dialog);
+            }
+            dialog.showModal();
+            
+        }
+        
+        if (window.location.hash) {
+            firstname.value = decodeURIComponent(window.location.hash.replace(/#|@(.)+/g, '') || 'เรา');
+        }
+        render();
+        firstname.onkeyup = render;
+        firstname.onchange = render;
+		lastname.onkeyup = render;
+		lastname.onchange = render;
+		bottomname.onkeyup = render;
+		bottomname.onchange = render;
+        fontsize.oninput = render;
+        download.onclick = function (e) {            
+            this.href = canvas.toDataURL();
+            this.download = 'we_love_something.png';
+        };
+    </script>
+</body>
+
+</html>
